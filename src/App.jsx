@@ -9,13 +9,46 @@ function App() {
   const [currentProject, setCurrentProject] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
-  // Sample project images (replace with your actual project images)
+  // Project images
   const projectGalleries = {
     posters: [
-      'https://images.unsplash.com/photo-1579389083078-4e7018379f0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
-      'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
-      'https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&auto=format&fit=crop&w=1494&q=80',
-      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80'
+      '/images/poster 1.png',
+      '/images/poster 2.png',
+      '/images/poster 3.png'
+    ],
+    advertisements: [
+      '/images/adv 1.png',
+      '/images/adv 2.png',
+      '/images/adv 3.png',
+      '/images/adv 4.png'
+    ],
+    collaborations: [
+      '/images/collaboratives 1.png',
+      '/images/collaboratives 2.png'
+    ],
+    branding: [
+      '/images/branding 1.png',
+      '/images/branding 2.png',
+      '/images/branding 3.png',
+      '/images/branding 4.png',
+      '/images/branding 5.png',
+      '/images/branding 6.png'
+    ],
+    social: [
+      '/images/Posts.png',
+      '/images/post 2.png',
+      '/images/post 3.png',
+      '/images/post 4.png'
+    ],
+    illustrations: [
+      '/images/Illustrations.png',
+      '/images/illustration 1.png',
+      '/images/illustration 3.png',
+      '/images/creatives 1.png',
+      '/images/creatives 2.png',
+      '/images/creatives 3.png',
+      '/images/creatives 4.png',
+      '/images/creatives 5.png'
     ],
     // Add more projects as needed
   };
@@ -178,7 +211,7 @@ function App() {
                 </div>
                 <div className="image-item">
                   <img 
-                    src="/images/Posts.png" 
+                    src="/images/adv 2.png" 
                     alt="Poster Design Process"
                     className="grayscale"
                   />
@@ -303,11 +336,11 @@ function App() {
           {/* Posters */}
           <div className="project-card" data-category="posters" style={{ '--i': 1 }}>
             <div className="project-image">
-              <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Movie Poster Design" />
+              <img src="/images/poster 1.png" alt="Movie Poster Design" />
               <span className="project-category">Posters</span>
             </div>
             <div className="project-content">
-              <h3>Cinematic Universe</h3>
+              
               <p>Bold and captivating movie poster series that brings stories to life through striking visuals and typography.</p>
               <button 
                 className="view-project-btn"
@@ -325,15 +358,14 @@ function App() {
           {/* Collaborations */}
           <div className="project-card" data-category="collaborations" style={{ '--i': 2 }}>
             <div className="project-image">
-              <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Brand Collaboration" />
+              <img src="/images/collaboratives 1.png" alt="Brand Collaboration" />
               <span className="project-category">Collaborations</span>
             </div>
             <div className="project-content">
-              <h3>Brand Fusion</h3>
               <p>Strategic partnership with leading brands to create unique, cross-promotional marketing campaigns.</p>
               <button 
                 className="view-project-btn"
-                onClick={() => openGallery('posters')}
+                onClick={() => openGallery('collaborations')}
               >
                 View Project
                 <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -347,15 +379,14 @@ function App() {
           {/* Social Media Posts */}
           <div className="project-card" data-category="social" style={{ '--i': 3 }}>
             <div className="project-image">
-              <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Social Media Campaign" />
+              <img src="/images/Posts.png" alt="Social Media Campaign" />
               <span className="project-category">Social Media</span>
             </div>
             <div className="project-content">
-              <h3>#TrendingNow</h3>
               <p>Viral social media campaign that increased engagement by 300% across all platforms.</p>
               <button 
                 className="view-project-btn"
-                onClick={() => openGallery('posters')}
+                onClick={() => openGallery('social')}
               >
                 View Project
                 <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -369,15 +400,14 @@ function App() {
           {/* Advertisements */}
           <div className="project-card" data-category="advertisements" style={{ '--i': 4 }}>
             <div className="project-image">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Advertising Campaign" />
+              <img src="/images/adv 1.png" alt="Advertising Campaign" />
               <span className="project-category">Advertisements</span>
             </div>
             <div className="project-content">
-              <h3>Urban Pulse</h3>
               <p>Outdoor and digital advertising campaign that transformed brand perception in urban markets.</p>
               <button 
                 className="view-project-btn"
-                onClick={() => openGallery('posters')}
+                onClick={() => openGallery('advertisements')}
               >
                 View Project
                 <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -391,15 +421,14 @@ function App() {
           {/* Illustrations */}
           <div className="project-card" data-category="illustrations" style={{ '--i': 5 }}>
             <div className="project-image">
-              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1461&q=80" alt="Digital Illustrations" />
+              <img src="/images/Illustrations.png" alt="Digital Illustrations" />
               <span className="project-category">Illustrations</span>
             </div>
             <div className="project-content">
-              <h3>Digital Dreams</h3>
               <p>Collection of vibrant digital illustrations for editorial and commercial use.</p>
               <button 
                 className="view-project-btn"
-                onClick={() => openGallery('posters')}
+                onClick={() => openGallery('illustrations')}
               >
                 View Project
                 <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -413,15 +442,14 @@ function App() {
           {/* Branding */}
           <div className="project-card" data-category="branding" style={{ '--i': 6 }}>
             <div className="project-image">
-              <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Brand Identity" />
+              <img src="/images/branding 1.png" alt="Brand Identity" />
               <span className="project-category">Branding</span>
             </div>
             <div className="project-content">
-              <h3>Evolve Branding</h3>
               <p>Complete brand identity system including logo, typography, color palette, and brand guidelines.</p>
               <button 
                 className="view-project-btn"
-                onClick={() => openGallery('posters')}
+                onClick={() => openGallery('branding')}
               >
                 View Project
                 <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -445,35 +473,28 @@ function App() {
                 <svg className="contact-icon" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
-                <a href="mailto:mystudio.com" className="contact-link">
-                  mystudio@gmail.com
+                <a href="adityaofficial2008@gmail.com" className="contact-link">
+                 adityaofficial2008@gmail.com
                 </a>
               </div>
               <div className="contact-item">
                 <svg className="contact-icon" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
                 </svg>
-                <a href="tel:+1234567890" className="contact-link">
-                  +91 66666666666 
+                <a href="tel:+91 629139344" className="contact-link">
+                  +91 629139344
                 </a>
               </div>
             </div>
             <div className="contact-cta">
-              <p>Or connect with us on social media:</p>
+              <p>Or message us on WhatsApp:</p>
               <div className="social-links">
-                <a href="https://instagram.com/vayosastudios" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
+                <a href="https://wa.me/919147412594" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
                   <svg className="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.14 4.77 1.69 4.92 4.91.06 1.27.07 1.64.07 4.85s-.01 3.58-.07 4.85c-.15 3.22-1.66 4.77-4.92 4.91-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.25-.14-4.77-1.69-4.92-4.91-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85c.15-3.22 1.66-4.77 4.92-4.91 1.27-.06 1.64-.07 4.85-.07zm0-2.16c-3.24 0-3.65.01-4.93.07-4.27.19-6.36 2.28-6.55 6.55-.05 1.28-.07 1.69-.07 4.93s.02 3.64.07 4.93c.19 4.27 2.28 6.36 6.55 6.55 1.29.05 1.69.07 4.93.07s3.64-.02 4.93-.07c4.27-.19 6.36-2.28 6.55-6.55.05-1.29.07-1.69.07-4.93s-.02-3.64-.07-4.93c-.19-4.27-2.28-6.36-6.55-6.55-1.29-.05-1.69-.07-4.93-.07z"/>
-                    <path d="M12 7.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9zm0 7.43a2.93 2.93 0 110-5.86 2.93 2.93 0 010 5.86z"/>
-                    <circle cx="16.5" cy="7.5" r="1.5"/>
+                    <path d="M17.5 14.4c-.2 0-1.2-.5-1.4-.5-.3-.1-.6-.1-.9.1-.3.3-.7.9-1 1.2-.1.2-.3.2-.5.1-.7-.3-1.4-.6-2-1.1-1.1-.9-1.8-2-2.3-3.3 0-.2 0-.4.1-.5.1-.1.2-.2.4-.2h.5c.2 0 .4 0 .6.2.2.2.6.6.7.7.1.1.2.2.3.1.1 0 .2-.1.3-.1.3-.3.7-.7 1-1 .3-.2.5-.4.8-.5.1 0 .2 0 .3.1l1.6.7c.1 0 .2.1.3.1.1 0 .2-.1.3-.1.2-.1.3-.3.4-.5.3-.7.5-1.4.5-2.1 0-.2-.1-.3-.2-.4-.1-.1-.3-.2-.5-.2h-1.8c-.2 0-.4 0-.5.1-.2.1-.3.3-.3.5-.1.5-.3 1.1-.5 1.6-.1.2-.3.3-.5.3-.1 0-.3 0-.4-.1-.2-.1-.4-.2-.6-.4-.2-.2-.5-.4-.7-.5-.6-.3-1.3-.4-2-.3-.3 0-.7.1-1 .2-.2.1-.5.3-.6.5-.1.2-.3.4-.4.6-.5 1.1-.5 2.4 0 3.5.5 1.1 1.2 2.1 2.2 2.9.9.7 2 1.3 3.2 1.6.5.1 1 .2 1.5.2 1.2 0 2.3-.3 3.3-.8.4-.2.8-.5 1.1-.9.1-.1.2-.3.2-.4v-1.5c0-.2-.1-.3-.3-.4z"/>
+                    <path d="M12 2C6.5 2 2 6.5 2 12c0 2.1.7 4.1 1.9 5.8l-1.3 3.9 4.1-1.3c1.6 1 3.5 1.6 5.4 1.6 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.2.8.9-3.1-.2-.3C3.7 14.8 3 13.4 3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9z"/>
                   </svg>
-                  <span>Instagram</span>
-                </a>
-                <a href="https://linkedin.com/company/vayosastudios" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
-                  <svg className="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                  </svg>
-                  <span>LinkedIn</span>
+                  <span>+91 9147412594</span>
                 </a>
               </div>
             </div>
